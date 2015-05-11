@@ -14,6 +14,7 @@
     <div class="page-header text-center">
         <h1><span class="fa fa-user"></span> Profile Page</h1>
         <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <a href="/post" class="btn btn-default btn-sm">Create Post</a>
     </div>
 
     <% if (typeof message !== 'undefined' && message.length > 0) { %>
@@ -26,9 +27,12 @@
             <h3><span class="fa fa-laptop"></span> Local</h3>
 
             <p>
-                <strong>id</strong>: NOT IMPLEMENTED<br>
-                <strong>email</strong>: NOT IMPLEMENTED<br>
-                <strong>password</strong>: NOT IMPLEMENTED
+                <strong>id</strong>: <%= user.id %><br>
+                <strong>username</strong>: <%= user.username %><br>
+                <strong>email</strong>: <%= user.email %><br>
+                <strong>password</strong>: <%= user.password %><br>
+                <strong>blog title</strong>: <%= user.blogTitle %><br>
+                <strong>blog description</strong>: <%= user.blogDescription %>
             </p>
                 
         </div>

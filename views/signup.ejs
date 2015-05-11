@@ -19,6 +19,11 @@
     <% } %>
 
     <form action="/signup" method="post">
+        <h3> Required:</h3>
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" name="username">
+        </div>
         <div class="form-group">
             <label>Email</label>
             <input type="text" class="form-control" name="email">
@@ -27,7 +32,19 @@
             <label>Password</label>
             <input type="password" class="form-control" name="password">
         </div>
-        
+
+        <hr>
+
+        <h3> Optional:</h3>
+        <div class="form-group">
+            <label>Blog Title</label>
+            <input type="text" class="form-control" name="title">
+        </div>
+        <div class="form-group">
+            <label>Blog Description</label>
+            <input type="text" class="form-control" name="description">
+        </div>
+
         <button type="submit" class="btn btn-warning btn-lg">Signup</button>
     </form>
 
