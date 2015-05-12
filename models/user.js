@@ -37,7 +37,6 @@ userSchema.pre('save', function(callback) {
 })
 
 userSchema.path('password').validate((pw) => {
-	console.log('password validate')
 	return pw.length >= 4 && /[A-Z]/.test(pw) && /[a-z]/.test(pw) && /[0-9]/.test(pw)
 })
 

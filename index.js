@@ -36,7 +36,8 @@ app.set('view engine', 'ejs')
 app.use(session({
 	secret: 'ilovethenodejs',
 	resave: true,
-	saveUninitialized: true
+	saveUninitialized: true,
+	cookie: {}
 }))
 
 // Use the passport middleware to enable passport
@@ -45,7 +46,6 @@ app.use(passport.initialize())
 // Enable passport persistent sessions
 app.use(passport.session())
 app.use(flash())
-
 
 // Configure passport strategies & routes
 passportMiddleware(app)
